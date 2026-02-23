@@ -10,6 +10,7 @@ import CalendarPage from "./pages/CalendarPage";
 import Analytics from "./pages/Analytics";
 import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
+import UploadVideo from "./pages/UploadVideo";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/videos" element={<Videos />} />
+            <Route path="/upload" element={<UploadVideo />} />
             <Route path="/editor" element={<Editor />} />
             <Route path="/calendar" element={<CalendarPage />} />
             <Route path="/analytics" element={<Analytics />} />
