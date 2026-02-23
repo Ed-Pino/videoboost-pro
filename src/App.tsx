@@ -5,17 +5,17 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "@/context/AuthContext";
 
-import Index from "./pages/Index";
-import Videos from "./pages/Videos";
-import Editor from "./pages/Editor";
-import CalendarPage from "./pages/CalendarPage";
-import Analytics from "./pages/Analytics";
-import Settings from "./pages/Settings";
-import UploadVideo from "./pages/UploadVideo";
+import Index from "./pages/dashoard/Index";
+import Videos from "./pages/dashoard/Videos";
+import Editor from "./pages/dashoard/Editor";
+import CalendarPage from "./pages/dashboard/CalendarPage";
+import Analytics from "./pages/dashboard/Analytics";
+import Settings from "./pages/dashboard/Settings";
+import UploadVideo from "./pages/dashboard/UploadVideo";
 import NotFound from "./pages/NotFound";
 
-import Login from "./pages/Login";
-import Register from "./pages/Register";
+import Login from "./pages/public/Login";
+import Register from "./pages/public/Register";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 const queryClient = new QueryClient();
