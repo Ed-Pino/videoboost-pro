@@ -5,9 +5,9 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "@/context/AuthContext";
 
-import Index from "./pages/dashoard/Index";
-import Videos from "./pages/dashoard/Videos";
-import Editor from "./pages/dashoard/Editor";
+import Index from "./pages/dashboard/Index";
+import Videos from "./pages/dashboard/Videos";
+import Editor from "./pages/dashboard/Editor";
 import CalendarPage from "./pages/dashboard/CalendarPage";
 import Analytics from "./pages/dashboard/Analytics";
 import Settings from "./pages/dashboard/Settings";
