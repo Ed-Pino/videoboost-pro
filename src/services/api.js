@@ -17,7 +17,11 @@ export const uploadVideo = async (file) => {
 };
 
 export const getVideos = async () => {
-  const response = await fetch(`${import.meta.env.VITE_API_URL}/videos`);
+  const response = await fetch(`${API_URL}/videos`);
+
+  if (!response.ok) {
+    throw new Error("Error obteniendo videos");
+  }
+
   return response.json();
 };
-
