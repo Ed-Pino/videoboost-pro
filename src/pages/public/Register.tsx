@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Eye, EyeOff, Video, Mail, Lock, User } from "lucide-react";
+import { registerUser } from "@/services/api";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -14,11 +15,22 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // TODO: integrate with backend
-    navigate("/");
-  };
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  if (password !== confirmPassword) {
+    alert("Las contraseñas no coinciden");
+    return;
+  }
+
+  try {
+    await registerUser(name, email, password);
+    alert("Registro exitoso, ahora puedes iniciar sesión");
+    navigate("/login");
+  } catch (error: any) {
+    alert(error.message);
+  }
+};
 
   return (
     <div className="min-h-screen bg-background flex items-center justify-center p-4">

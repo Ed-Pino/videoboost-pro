@@ -5,6 +5,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Eye, EyeOff, Video, Mail, Lock } from "lucide-react";
+import { loginUser } from "@/services/api";
+
 
 const Login = () => {
   const navigate = useNavigate();
@@ -12,11 +14,20 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // TODO: integrate with backend
-    navigate("/");
-  };
+
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  try {
+    const data = await loginUser(email, password);
+
+    if (data.token) {
+      localStorage.setItem("token", data.token);
+      navigate("/");
+    }
+  } catch (error: any) {
+    alert(error.message);
+  }
+};
 
   return (
     <div className="min-h-screen bg-background flex items-center justify-center p-4">
