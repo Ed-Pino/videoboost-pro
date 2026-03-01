@@ -24,16 +24,25 @@ export const loginUser = async (email, password) => {
 };
 
 export const registerUser = async (name, email, password) => {
+  // 1. La URL debe empezar con /api (a través de la variable)
+  // 2. Quitamos el dominio de Render del código
   const response = await fetch(`${API_URL}/auth/register`, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ name, email, password }),
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ 
+      name: name, 
+      email: email, 
+      password: password 
+    }),
   });
 
   if (!response.ok) {
     const errorData = await response.json().catch(() => ({}));
-    throw new Error(errorData.message || "Error al registrar el usuario");
+    throw new Error(errorData.message || "Error al registrar usuario");
   }
+
   return response.json();
 };
 
