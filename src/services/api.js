@@ -20,28 +20,27 @@ export const loginUser = async (email, password) => {
   return result.data; 
 };
 
-// --- REGISTRO (Ajustado a tu clase User.java) ---
-export const registerUser = async (name, email, password) => {
-  // Dividimos el 'name' del formulario en firstName y lastName para tu modelo Java
-  const nameParts = name.trim().split(" ");
-  const firstName = nameParts[0];
-  const lastName = nameParts.slice(1).join(" ") || "."; // lastName es obligatorio en tu Java
-
-  const response = await fetch(`${API_URL}/v1/auth/register`, {
+// Actualiza la función registerUser en api.js
+export const registerUser = async (firstName, lastName, email, password) => {
+  const response = await fetch(`${import.meta.env.VITE_API_URL}/v1/auth/register`, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: {
+      "Content-Type": "application/json",
+    },
     body: JSON.stringify({ 
-      firstName, // Coincide con tu variable en Java
-      lastName,  // Coincide con tu variable en Java
-      email,     // Coincide con tu variable en Java
-      password   // Coincide con tu variable en Java
+      firstName: firstName, // Coincide con tu Java RegisterReq
+      lastName: lastName,   // Coincide con tu Java RegisterReq
+      email: email, 
+      password: password 
     }),
   });
 
   if (!response.ok) {
     const errorData = await response.json().catch(() => ({}));
+    // Mostramos el mensaje exacto que devuelva Java (ej. "La contraseña es débil")
     throw new Error(errorData.message || "Error al registrar el usuario");
   }
+
   return response.json();
 };
 
