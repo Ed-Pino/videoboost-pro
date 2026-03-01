@@ -18,14 +18,13 @@ const Videos = () => {
   }, []);
 
   const fetchVideos = async () => {
-    try {
-      // ✅ Usamos la función del servicio que ya tiene la URL correcta
-      const data = await getVideos();
-      setVideos(Array.isArray(data) ? data : []);
-    } catch (error) {
-      console.error("Error cargando videos:", error);
-    }
-  };
+  try {
+    const data = await getVideos(1); // Pasamos ID de proyecto 1 por ejemplo
+    setVideos(data); // data ahora es el array de content
+  } catch (error) {
+    console.error(error);
+  }
+};
 
   return (
     <MainLayout
