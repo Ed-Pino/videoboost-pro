@@ -5,10 +5,8 @@ const getAuthHeaders = () => {
   return token ? { "Authorization": `Bearer ${token}` } : {};
 };
 
-// --- AUTENTICACIÓN ---
-
+// --- LOGIN ---
 export const loginUser = async (email, password) => {
-  // Tu controlador en Java probablemente esté bajo /api/v1/auth/login
   const response = await fetch(`${API_URL}/v1/auth/login`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -16,50 +14,60 @@ export const loginUser = async (email, password) => {
   });
 
   if (!response.ok) throw new Error("Credenciales inválidas");
-  return response.json();
+  
+  // Tu Java devuelve un ApiResult, el token suele estar en result.data
+  const result = await response.json();
+  return result.data; 
 };
 
+// --- REGISTRO (Ajustado a tu clase User.java) ---
 export const registerUser = async (name, email, password) => {
-  // 🚨 IMPORTANTE: Tu clase User.java usa firstName y lastName.
-  // Vamos a dividir el nombre del formulario para que Java lo acepte.
+  // Dividimos el 'name' del formulario en firstName y lastName para tu modelo Java
   const nameParts = name.trim().split(" ");
   const firstName = nameParts[0];
-  const lastName = nameParts.slice(1).join(" ") || "."; // Java no permite nulos
+  const lastName = nameParts.slice(1).join(" ") || "."; // lastName es obligatorio en tu Java
 
   const response = await fetch(`${API_URL}/v1/auth/register`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ 
-      firstName: firstName, 
-      lastName: lastName, 
-      email: email, 
-      password: password 
+      firstName, // Coincide con tu variable en Java
+      lastName,  // Coincide con tu variable en Java
+      email,     // Coincide con tu variable en Java
+      password   // Coincide con tu variable en Java
     }),
   });
 
   if (!response.ok) {
     const errorData = await response.json().catch(() => ({}));
-    throw new Error(errorData.message || "Error al registrar usuario");
+    throw new Error(errorData.message || "Error al registrar el usuario");
   }
   return response.json();
 };
 
-// --- VIDEOS ---
+// --- OBTENER MI PERFIL (Ajustado a tu UserController.java) ---
+export const getMyProfile = async () => {
+  const response = await fetch(`${API_URL}/users/me`, {
+    method: "GET",
+    headers: { ...getAuthHeaders() },
+  });
 
-// 🚨 IMPORTANTE: Tu VideoController pide un {projectId}. 
-// Usaremos el ID 1 por defecto para probar, o puedes pasar el que necesites.
+  if (!response.ok) throw new Error("No se pudo obtener el perfil");
+  
+  const result = await response.json();
+  return result.data; // Retornamos result.data porque usas ApiResult en Java
+};
+
+// --- OBTENER VIDEOS ---
 export const getVideos = async (projectId = 1) => {
   const response = await fetch(`${API_URL}/v1/projects/${projectId}/videos`, {
     method: "GET",
-    headers: {
-      ...getAuthHeaders(),
-      "Content-Type": "application/json",
-    },
+    headers: { ...getAuthHeaders() },
   });
 
   if (!response.ok) throw new Error("Error obteniendo videos");
   
   const result = await response.json();
-  // Tu Java usa Page de Spring. Los videos están en result.data.content
+  // Como usas Page de Spring Data, los videos están en result.data.content
   return result.data?.content || []; 
 };
