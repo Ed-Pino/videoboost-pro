@@ -13,6 +13,8 @@ import Analytics from "./pages/dashboard/Analytics";
 import Settings from "./pages/dashboard/Settings";
 import UploadVideo from "./pages/dashboard/UploadVideo";
 import NotFound from "./pages/NotFound";
+import ForgotPassword from "./pages/public/ForgotPassword";
+
 
 import Login from "./pages/public/Login";
 import Register from "./pages/public/Register";
@@ -33,6 +35,8 @@ const App = () => (
               {/* PUBLIC ROUTES */}
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
+              <Route path="/forgot-password" element={<ForgotPassword />} />
+
 
               {/* PRIVATE ROUTES */}
               <Route element={<ProtectedRoute />}>

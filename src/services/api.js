@@ -28,8 +28,8 @@ export const registerUser = async (firstName, lastName, email, password) => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({ 
-      firstName: firstName, // Coincide con tu Java RegisterReq
-      lastName: lastName,   // Coincide con tu Java RegisterReq
+      firstName: firstName, 
+      lastName: lastName,   
       email: email, 
       password: password 
     }),
