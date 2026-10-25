@@ -1,0 +1,184 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="1000" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1020"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="primary" x1="118" y1="166" x2="420" y2="516" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#60A5FA"/>
+      <stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="942" y1="173" x2="1195" y2="468" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FB923C"/>
+      <stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="success" x1="722" y1="731" x2="1126" y2="866" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#34D399"/>
+      <stop offset="1" stop-color="#10B981"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000000" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+
+  <!-- Sidebar -->
+  <rect x="0" y="0" width="240" height="1000" fill="#0E172A"/>
+  <rect x="0" y="0" width="240" height="86" fill="#0F172A"/>
+  <rect x="28" y="20" width="42" height="42" rx="12" fill="url(#primary)"/>
+  <text x="86" y="49" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-weight="800" font-size="28">E</text>
+  <text x="88" y="80" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-weight="600" font-size="12">EleVideo</text>
+
+  <g fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="600">
+    <rect x="24" y="120" width="192" height="44" rx="12" fill="#162033"/>
+    <text x="52" y="147">Dashboard</text>
+    <rect x="24" y="176" width="192" height="44" rx="12" fill="transparent"/>
+    <text x="52" y="203" fill="#94A3B8">Videos</text>
+    <rect x="24" y="232" width="192" height="44" rx="12" fill="transparent"/>
+    <text x="52" y="259" fill="#94A3B8">Editor</text>
+    <rect x="24" y="288" width="192" height="44" rx="12" fill="transparent"/>
+    <text x="52" y="315" fill="#94A3B8">Calendar</text>
+    <rect x="24" y="344" width="192" height="44" rx="12" fill="transparent"/>
+    <text x="52" y="371" fill="#94A3B8">Analytics</text>
+    <rect x="24" y="400" width="192" height="44" rx="12" fill="transparent"/>
+    <text x="52" y="427" fill="#94A3B8">Settings</text>
+  </g>
+
+  <g>
+    <rect x="24" y="777" width="192" height="100" rx="18" fill="#111827" stroke="#273449"/>
+    <circle cx="53" cy="828" r="16" fill="url(#accent)"/>
+    <text x="80" y="822" fill="#E2E8F0" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="15">Marta</text>
+    <text x="80" y="844" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-size="12">Content creator</text>
+  </g>
+
+  <!-- Main area -->
+  <rect x="240" y="0" width="1360" height="1000" fill="transparent"/>
+
+  <g>
+    <text x="284" y="88" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">Dashboard</text>
+    <text x="284" y="112" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-size="13">Bienvenido de vuelta. Aquí está el resumen de tu contenido.</text>
+
+    <rect x="284" y="140" width="360" height="134" rx="24" fill="#0F172A" stroke="#1F2937"/>
+    <text x="314" y="175" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-size="13">Total Videos</text>
+    <text x="314" y="228" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="800">47</text>
+    <text x="314" y="250" fill="#34D399" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700">+5 este mes</text>
+    <rect x="568" y="156" width="22" height="22" rx="8" fill="url(#primary)"/>
+    <rect x="284" y="292" width="360" height="134" rx="24" fill="#0F172A" stroke="#1F2937"/>
+    <text x="314" y="327" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-size="13">Vistas Totales</text>
+    <text x="314" y="380" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="800">124.5K</text>
+    <text x="314" y="402" fill="#FB923C" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700">+23% vs. mes anterior</text>
+    <rect x="568" y="308" width="22" height="22" rx="8" fill="url(#accent)"/>
+
+    <rect x="676" y="140" width="360" height="134" rx="24" fill="#0F172A" stroke="#1F2937"/>
+    <text x="706" y="175" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-size="13">Seguidores</text>
+    <text x="706" y="228" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="800">8.2K</text>
+    <text x="706" y="250" fill="#34D399" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700">+340 esta semana</text>
+    <rect x="960" y="156" width="22" height="22" rx="8" fill="url(#success)"/>
+
+    <rect x="1068" y="140" width="360" height="134" rx="24" fill="#0F172A" stroke="#1F2937"/>
+    <text x="1098" y="175" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-size="13">Shorts Creados</text>
+    <text x="1098" y="228" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="800">23</text>
+    <text x="1098" y="250" fill="#E2E8F0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700">12 publicados</text>
+    <rect x="1342" y="156" width="22" height="22" rx="8" fill="url(#primary)"/>
+
+    <rect x="284" y="468" width="854" height="256" rx="28" fill="#0F172A" stroke="#1F2937" filter="url(#shadow)"/>
+    <text x="318" y="510" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">Performance</text>
+    <text x="318" y="533" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-size="13">Resumen de visualizaciones</text>
+
+    <g opacity="0.15">
+      <line x1="318" y1="585" x2="1086" y2="585" stroke="#94A3B8"/>
+      <line x1="318" y1="644" x2="1086" y2="644" stroke="#94A3B8"/>
+      <line x1="318" y1="703" x2="1086" y2="703" stroke="#94A3B8"/>
+    </g>
+
+    <path d="M318 664C383 642 421 600 486 608C551 616 565 538 629 529C694 520 726 598 785 573C845 547 886 438 954 451C1019 464 1032 490 1086 471V679H318V664Z" fill="url(#primary)" opacity="0.28"/>
+    <path d="M318 646C383 628 421 582 486 591C551 600 565 526 629 517C694 508 726 569 785 548C845 526 886 424 954 436C1019 448 1032 477 1086 455" stroke="url(#primary)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <g fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="12">
+      <text x="318" y="740">Jan</text>
+      <text x="420" y="740">Feb</text>
+      <text x="522" y="740">Mar</text>
+      <text x="624" y="740">Apr</text>
+      <text x="726" y="740">May</text>
+      <text x="828" y="740">Jun</text>
+      <text x="930" y="740">Jul</text>
+      <text x="1032" y="740">Aug</text>
+    </g>
+
+    <rect x="1176" y="468" width="418" height="256" rx="28" fill="#0F172A" stroke="#1F2937"/>
+    <text x="1208" y="510" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">Quick Actions</text>
+    <g>
+      <rect x="1208" y="542" width="350" height="56" rx="16" fill="#111827"/>
+      <rect x="1224" y="558" width="24" height="24" rx="8" fill="url(#primary)"/>
+      <text x="1260" y="575" fill="#E2E8F0" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="600">Crear video</text>
+      <text x="1488" y="575" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-size="13">→</text>
+    </g>
+    <g>
+      <rect x="1208" y="610" width="350" height="56" rx="16" fill="#111827"/>
+      <rect x="1224" y="626" width="24" height="24" rx="8" fill="url(#accent)"/>
+      <text x="1260" y="643" fill="#E2E8F0" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="600">Subir clip</text>
+      <text x="1488" y="643" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-size="13">→</text>
+    </g>
+    <g>
+      <rect x="1208" y="678" width="350" height="56" rx="16" fill="#111827"/>
+      <rect x="1224" y="694" width="24" height="24" rx="8" fill="url(#success)"/>
+      <text x="1260" y="711" fill="#E2E8F0" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="600">Programar publicación</text>
+      <text x="1488" y="711" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-size="13">→</text>
+    </g>
+
+    <rect x="284" y="760" width="854" height="172" rx="24" fill="#0F172A" stroke="#1F2937"/>
+    <text x="316" y="796" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">Videos Recientes</text>
+    <text x="1060" y="796" fill="#60A5FA" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700">Ver todos</text>
+
+    <g>
+      <rect x="316" y="820" width="188" height="84" rx="16" fill="#111827"/>
+      <rect x="316" y="820" width="188" height="84" rx="16" fill="url(#primary)" opacity="0.18"/>
+      <rect x="332" y="834" width="76" height="56" rx="10" fill="#1E293B"/>
+      <circle cx="370" cy="862" r="16" fill="#60A5FA" opacity="0.7"/>
+      <text x="424" y="849" fill="#E2E8F0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">Cómo escalar</text>
+      <text x="424" y="868" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-size="12">12:34 · YouTube</text>
+      <text x="424" y="887" fill="#34D399" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700">Published</text>
+    </g>
+
+    <g>
+      <rect x="524" y="820" width="188" height="84" rx="16" fill="#111827"/>
+      <rect x="540" y="834" width="76" height="56" rx="10" fill="#1E293B"/>
+      <circle cx="578" cy="862" r="16" fill="#FB923C" opacity="0.75"/>
+      <text x="632" y="849" fill="#E2E8F0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">Errores en startup</text>
+      <text x="632" y="868" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-size="12">8:45 · Instagram</text>
+      <text x="632" y="887" fill="#34D399" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700">Published</text>
+    </g>
+
+    <g>
+      <rect x="732" y="820" width="188" height="84" rx="16" fill="#111827"/>
+      <rect x="748" y="834" width="76" height="56" rx="10" fill="#1E293B"/>
+      <circle cx="786" cy="862" r="16" fill="#34D399" opacity="0.75"/>
+      <text x="840" y="849" fill="#E2E8F0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">Productividad</text>
+      <text x="840" y="868" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-size="12">15:20 · YouTube</text>
+      <text x="840" y="887" fill="#FBBF24" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700">Scheduled</text>
+    </g>
+
+    <g>
+      <rect x="940" y="820" width="188" height="84" rx="16" fill="#111827"/>
+      <rect x="956" y="834" width="76" height="56" rx="10" fill="#1E293B"/>
+      <circle cx="994" cy="862" r="16" fill="#A78BFA" opacity="0.8"/>
+      <text x="1048" y="849" fill="#E2E8F0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">Detrás de cámaras</text>
+      <text x="1048" y="868" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-size="12">0:58 · TikTok</text>
+      <text x="1048" y="887" fill="#FBBF24" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700">Draft</text>
+    </g>
+
+    <rect x="1176" y="760" width="418" height="172" rx="24" fill="#0F172A" stroke="#1F2937"/>
+    <text x="1208" y="796" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">Agenda</text>
+    <g>
+      <rect x="1208" y="816" width="356" height="44" rx="12" fill="#111827"/>
+      <circle cx="1232" cy="838" r="6" fill="#60A5FA"/>
+      <text x="1252" y="843" fill="#E2E8F0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="600">Lunes 09:00 · Lanza video publicitario</text>
+    </g>
+    <g>
+      <rect x="1208" y="870" width="356" height="44" rx="12" fill="#111827"/>
+      <circle cx="1232" cy="892" r="6" fill="#FB923C"/>
+      <text x="1252" y="897" fill="#E2E8F0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="600">Miércoles 16:30 · Revisión de analytics</text>
+    </g>
+  </g>
+</svg>
